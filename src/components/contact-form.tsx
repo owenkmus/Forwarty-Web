@@ -17,7 +17,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
-import { contactFormSchema, submitContactForm } from "@/app/actions"
+import { submitContactForm } from "@/app/actions"
+import { contactFormSchema } from "@/lib/schemas"
 import { Loader2 } from "lucide-react";
 
 export function ContactForm() {

@@ -1,17 +1,17 @@
 'use server';
 
 import { z } from 'zod';
-
-export const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "El nombre debe tener al menos 2 caracteres." }),
-  email: z.string().email({ message: "Por favor, introduce un email válido." }),
-  company: z.string().optional(),
-  message: z.string().min(10, { message: "El mensaje debe tener al menos 10 caracteres." }),
-});
+import { contactFormSchema } from '@/lib/schemas';
 
 export async function submitContactForm(data: z.infer<typeof contactFormSchema>) {
+  // Validate data on the server
+  const parsed = contactFormSchema.safeParse(data);
+  if (!parsed.success) {
+    return { success: false, message: 'Datos de formulario inválidos.' };
+  }
+  
   try {
-    console.log('Form data submitted:', data);
+    console.log('Form data submitted:', parsed.data);
     
     // Simulate network delay
     await new Promise(resolve => setTimeout(resolve, 1000));
