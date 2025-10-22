@@ -56,7 +56,7 @@ export function Header() {
 
           <div className="flex items-center space-x-4">
              <Button className="hidden lg:flex" variant="default" asChild>
-                <Link href="#demo">Ver demo <ArrowRight className="ml-2 h-4 w-4"/></Link>
+                <Link href="#contacto">Ver demo <ArrowRight className="ml-2 h-4 w-4"/></Link>
              </Button>
             <div className="lg:hidden">
               <Sheet open={open} onOpenChange={setOpen}>
@@ -88,7 +88,7 @@ export function Header() {
                             ))}
                         </nav>
                          <Button className="w-full mt-8" variant="default" asChild>
-                            <Link href="#demo">Ver demo <ArrowRight className="ml-2 h-4 w-4"/></Link>
+                            <Link href="#contacto">Ver demo <ArrowRight className="ml-2 h-4 w-4"/></Link>
                          </Button>
                     </div>
                 </SheetContent>

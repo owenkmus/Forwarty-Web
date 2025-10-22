@@ -76,7 +76,7 @@ export function HeroSection() {
                 <Link href="#servicios">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="#demo">Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
+                <Link href="#contacto">Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
               </Button>
             </motion.div>
           </div>
