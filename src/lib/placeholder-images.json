@@ -3,43 +3,43 @@
     {
       "id": "hero-illustration",
       "description": "An abstract 3D render of interconnected nodes and data streams, representing a complex logistics network.",
-      "imageUrl": "https://images.unsplash.com/photo-1639755249841-d42d3fd3a2ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDB8fHx8MTc2MTE4NzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1684766462347-78b3bfc0995d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDB8fHx8MTc2MTE3MDgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract technology network"
     },
     {
       "id": "about-us-illustration",
       "description": "A diverse group of engineers and professionals working on a futuristic interface with data visualizations and logistics elements.",
-      "imageUrl": "https://images.unsplash.com/photo-1551884831-a9514e040c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYxMTg3MjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1561719998-e6763867e182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmdXR1cmlzdGljJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYxMTcwODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "futuristic team collaboration"
     },
     {
       "id": "blog-1",
       "description": "An organized and efficient logistics warehouse with automated robots.",
-      "imageUrl": "https://images.unsplash.com/photo-1644079446600-219068676743?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMDg4NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1504376830547-506dedfe1fe9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMDg4NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logistics warehouse"
     },
     {
       "id": "blog-2",
       "description": "A large cargo ship on the ocean, representing global supply chains.",
-      "imageUrl": "https://images.unsplash.com/photo-1585713181935-d5f622cc2415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXJnbyUyMHNoaXB8ZW58MHx8fHwxNzYxMTQ3MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573014089159-8ee711dc5a8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FyZ28lMjBzaGlwfGVufDB8fHx8MTc2MTE0NzE0OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cargo ship"
     },
     {
       "id": "news-1",
       "description": "A screen showing complex AI analytics charts and graphs for logistics.",
-      "imageUrl": "https://images.unsplash.com/photo-1642775196125-38a9eb496568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBSSUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1743796055664-3473eedab36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxBSSUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "AI analytics"
     },
     {
       "id": "news-2",
       "description": "A digital map of the world with interconnected lines showing a global supply chain network.",
-      "imageUrl": "https://images.unsplash.com/photo-1759611325490-1e05282fbedb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1759120828752-22c74f575dbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global supply chain"
     },
     {
       "id": "hero-background",
       "description": "A stylized world map with glowing lines connecting major cities, representing global logistics routes.",
-      "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674c42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjExODcyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1735660244565-9574ca46c57d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnbG9iYWwlMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjExNzA4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global network background"
     }
   ]
