@@ -41,7 +41,7 @@ export function HeroSection() {
           alt={heroBgImage.description}
           fill
           priority
-          className="object-cover opacity-10"
+          className="object-cover opacity-20"
           data-ai-hint={heroBgImage.imageHint}
         />
       )}
@@ -92,6 +92,7 @@ export function HeroSection() {
                 priority
                 className="object-contain"
                 data-ai-hint={heroImage.imageHint}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             )}
           </motion.div>
