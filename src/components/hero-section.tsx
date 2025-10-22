@@ -41,14 +41,14 @@ export function HeroSection() {
           alt={heroBgImage.description}
           fill
           priority
-          className="object-cover opacity-20"
+          className="object-cover opacity-20 -z-20"
           data-ai-hint={heroBgImage.imageHint}
         />
       )}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/50 to-background bg-gradient-animated -z-10"></div>
       <div className="absolute inset-0 bg-background/50 -z-10"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
           variants={containerVariants}
