@@ -19,7 +19,7 @@ const logos = [
 
 export function TechnologiesSection() {
   return (
-    <section id="herramientas" className="py-16 bg-background sm:py-24">
+    <section id="herramientas" className="py-16 bg-secondary/10 sm:py-24">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">Nuestras Herramientas</h2>
@@ -32,8 +32,8 @@ export function TechnologiesSection() {
             {[...logos, ...logos].map((logo, index) => {
               const LogoComponent = logo.component;
               return (
-                <div key={index} className="flex-shrink-0 w-48 h-24 flex items-center justify-center mx-4">
-                  <LogoComponent className="h-12 text-muted-foreground hover:text-primary transition-colors duration-300" />
+                <div key={index} className="flex-shrink-0 w-64 h-32 flex items-center justify-center mx-4">
+                  <LogoComponent className="h-16 text-muted-foreground transition-colors duration-300" />
                 </div>
               );
             })}
