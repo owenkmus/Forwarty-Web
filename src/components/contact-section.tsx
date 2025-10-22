@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/contact-form';
-import { Mail, MapPin, Phone, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin, Twitter, Youtube, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export function ContactSection() {
@@ -18,15 +18,19 @@ export function ContactSection() {
             <div className="space-y-4 text-muted-foreground">
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-primary"/>
-                <a href="mailto:contacto@forwarty.com" className="hover:text-primary">contacto@forwarty.com</a>
+                <a href="mailto:contacto@forwarty.co" className="hover:text-primary">contacto@forwarty.co</a>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-primary"/>
-                <a href="tel:+34910123456" className="hover:text-primary">+34 910 123 456</a>
+                <a href="tel:+576015550123" className="hover:text-primary">(+57) 601 555 0123</a>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-primary"/>
-                <span>Paseo de la Castellana, 95, Madrid, España</span>
+                <span>Carrera 15 #93-75, Bogotá, Colombia</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <MessageCircle className="w-5 h-5 text-primary"/>
+                <a href="https://wa.me/573101234567" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Contactar por WhatsApp</a>
               </div>
             </div>
             <div className="flex space-x-4 mt-8">

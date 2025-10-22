@@ -8,6 +8,7 @@ import { ArrowRight, PlayCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-illustration');
+const heroBgImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
 export function HeroSection() {
   const containerVariants = {
@@ -34,7 +35,17 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background bg-gradient-animated -z-10"></div>
+      {heroBgImage && (
+        <Image
+          src={heroBgImage.imageUrl}
+          alt={heroBgImage.description}
+          fill
+          priority
+          className="object-cover opacity-10"
+          data-ai-hint={heroBgImage.imageHint}
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/50 to-background bg-gradient-animated -z-10"></div>
       <div className="absolute inset-0 bg-background/50 -z-10"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

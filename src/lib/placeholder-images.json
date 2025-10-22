@@ -2,15 +2,15 @@
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "A futuristic 3D illustration representing the flow of data in a smart logistics network.",
-      "imageUrl": "https://images.unsplash.com/photo-1685034759882-34583cece8e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdXR1cmlzdGljJTIwZGF0YSUyMGZsb3d8ZW58MHx8fHwxNzYxMTYxNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "futuristic data flow"
+      "description": "An abstract 3D render of interconnected nodes and data streams, representing a complex logistics network.",
+      "imageUrl": "https://images.unsplash.com/photo-1639755249841-d42d3fd3a2ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDB8fHx8MTc2MTE4NzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract technology network"
     },
     {
       "id": "about-us-illustration",
-      "description": "An illustration of a diverse team collaborating around a table with logistics charts.",
-      "imageUrl": "https://images.unsplash.com/photo-1566140967404-b8b3932483f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjEwNzc2OTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "team collaboration"
+      "description": "A diverse group of engineers and professionals working on a futuristic interface with data visualizations and logistics elements.",
+      "imageUrl": "https://images.unsplash.com/photo-1551884831-a9514e040c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYxMTg3MjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic team collaboration"
     },
     {
       "id": "blog-1",
@@ -35,6 +35,12 @@
       "description": "A digital map of the world with interconnected lines showing a global supply chain network.",
       "imageUrl": "https://images.unsplash.com/photo-1759611325490-1e05282fbedb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global supply chain"
+    },
+    {
+      "id": "hero-background",
+      "description": "A stylized world map with glowing lines connecting major cities, representing global logistics routes.",
+      "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674c42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjExODcyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "global network background"
     }
   ]
 }
