@@ -6,7 +6,7 @@ const footerLinks = {
     'Empresa': [
         { name: 'Acerca de', href: '#acerca' },
         { name: 'Blog', href: '#blog' },
-        { name: 'Noticias', href: '#noticias' },
+        { name: 'Noticias', href: '#blog' },
     ],
     'Soluciones': [
         { name: 'ERP Cloud', href: '#servicios' },
