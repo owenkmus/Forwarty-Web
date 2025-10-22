@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-illustration",
+      "description": "A futuristic 3D illustration representing the flow of data in a smart logistics network.",
+      "imageUrl": "https://images.unsplash.com/photo-1685034759882-34583cece8e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdXR1cmlzdGljJTIwZGF0YSUyMGZsb3d8ZW58MHx8fHwxNzYxMTYxNTA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic data flow"
+    },
+    {
+      "id": "blog-1",
+      "description": "An organized and efficient logistics warehouse with automated robots.",
+      "imageUrl": "https://images.unsplash.com/photo-1644079446600-219068676743?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMDg4NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logistics warehouse"
+    },
+    {
+      "id": "blog-2",
+      "description": "A large cargo ship on the ocean, representing global supply chains.",
+      "imageUrl": "https://images.unsplash.com/photo-1585713181935-d5f622cc2415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXJnbyUyMHNoaXB8ZW58MHx8fHwxNzYxMTQ3MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cargo ship"
+    },
+    {
+      "id": "news-1",
+      "description": "A screen showing complex AI analytics charts and graphs for logistics.",
+      "imageUrl": "https://images.unsplash.com/photo-1642775196125-38a9eb496568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxBSSUyMGFuYWx5dGljc3xlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI analytics"
+    },
+    {
+      "id": "news-2",
+      "description": "A digital map of the world with interconnected lines showing a global supply chain network.",
+      "imageUrl": "https://images.unsplash.com/photo-1759611325490-1e05282fbedb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "global supply chain"
+    }
+  ]
 }
