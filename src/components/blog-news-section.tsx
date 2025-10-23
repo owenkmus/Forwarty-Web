@@ -65,6 +65,8 @@ const itemVariants = {
 };
 
 const PostCard = ({ post }: { post: any }) => {
+  // NOTE: The blog images are still using external URLs. 
+  // You can change them to local paths in `src/lib/placeholder-images.json`
   const image = PlaceHolderImages.find(p => p.id === post.imageId);
   return (
     <motion.div variants={itemVariants}>
