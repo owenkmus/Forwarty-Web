@@ -108,7 +108,7 @@ export function HeroSection() {
                   exit="exit"
                   className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
                 >
-                  {heroTexts[currentSlide]}
+                  {heroTexts[currentSlide % heroTexts.length]}
                 </motion.h1>
               </AnimatePresence>
             </div>
