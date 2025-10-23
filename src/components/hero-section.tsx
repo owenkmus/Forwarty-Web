@@ -92,7 +92,7 @@ export function HeroSection() {
         <Carousel
           setApi={setApi}
           plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full -z-10"
+          className="absolute inset-0 w-full h-full"
           opts={{ loop: true }}
         >
           <CarouselContent>
@@ -114,9 +114,9 @@ export function HeroSection() {
           </CarouselContent>
         </Carousel>
         
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="relative z-10 w-full h-full flex items-center justify-center">
             <motion.div
-                className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center"
+                className="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -143,7 +143,7 @@ export function HeroSection() {
                     Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.
                 </motion.p>
                 <motion.div
-                    className="flex flex-col sm:flex-row justify-center gap-4 z-20"
+                    className="flex flex-col sm:flex-row justify-center gap-4"
                     variants={itemVariants}
                 >
                     <Button asChild size="lg">
