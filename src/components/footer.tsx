@@ -4,7 +4,7 @@ import { DynamicYear } from "./dynamic-year";
 
 const footerLinks = {
     'Empresa': [
-        { name: 'Acerca de', href: '#acerca' },
+        { name: 'Cómo funciona', href: '#como-funciona' },
         { name: 'Blog', href: '#blog' },
         { name: 'Noticias', href: '#blog' },
     ],

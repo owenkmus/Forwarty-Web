@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Inicio', href: '#inicio' },
-  { name: 'Acerca de', href: '#acerca' },
+  { name: 'Cómo funciona', href: '#como-funciona' },
   { name: 'Módulos', href: '#modulos' },
   { name: 'Blog y Noticias', href: '#blog' },
   { name: 'Contacto', href: '#contacto' },
