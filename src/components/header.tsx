@@ -37,7 +37,7 @@ export function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="#inicio" className="text-2xl font-bold text-foreground">
+          <Link href="#inicio" className="text-2xl font-bold text-white">
             Forwarty<span className="text-primary">.</span>
           </Link>
           
@@ -46,7 +46,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-white hover:text-primary transition-colors"
               >
                 {item.name}
               </Link>
@@ -60,7 +60,7 @@ export function Header() {
             <div className="lg:hidden">
               <Sheet open={open} onOpenChange={setOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
+                  <Button variant="ghost" size="icon" className="text-white hover:text-white">
                     <Menu className="h-6 w-6" />
                   </Button>
                 </SheetTrigger>
