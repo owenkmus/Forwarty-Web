@@ -8,8 +8,10 @@ import { ArrowRight, PlayCircle } from 'lucide-react';
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
-const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-bg-1');
+const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-bg'));
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -32,16 +34,28 @@ export function HeroSection() {
   return (
     <>
       <section id="inicio" className="relative w-full h-screen min-h-[700px] overflow-hidden">
-        {backgroundImage && (
-          <Image
-            src={backgroundImage.imageUrl}
-            alt={backgroundImage.description}
-            fill
-            priority
-            className="object-cover"
-            data-ai-hint={backgroundImage.imageHint}
-          />
-        )}
+        <div className="absolute inset-0 z-0">
+          <Carousel
+            className="w-full h-full"
+            plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+            opts={{ loop: true }}
+          >
+            <CarouselContent className="h-full">
+              {heroImages.map((image) => (
+                <CarouselItem key={image.id} className="h-full">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    priority={heroImages.indexOf(image) === 0}
+                    className="object-cover"
+                    data-ai-hint={image.imageHint}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
         
         <div className="absolute inset-0 bg-black/40 z-10"></div>
 
