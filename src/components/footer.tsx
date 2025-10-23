@@ -9,9 +9,7 @@ const footerLinks = {
         { name: 'Noticias', href: '#blog' },
     ],
     'Soluciones': [
-        { name: 'ERP Cloud', href: '#servicios' },
-        { name: 'Automatización', href: '#servicios' },
-        { name: 'Integraciones', href: '#servicios' },
+        { name: 'Módulos', href: '#modulos' },
     ],
     'Legal': [
         { name: 'Política de Privacidad', href: '#' },
