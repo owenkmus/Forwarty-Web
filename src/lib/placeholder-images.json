@@ -39,19 +39,19 @@
     {
       "id": "hero-bg-1",
       "description": "Dashboard de ERP con gráficos y mapa de logística global",
-      "imageUrl": "https://images.unsplash.com/photo-1641290451977-a427586acf49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsb2dpc3RpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMTQzOTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587903318972-9ca74ba4579c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsb2dpc3RpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMTQzOTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logistics dashboard"
     },
     {
       "id": "hero-bg-2",
       "description": "Puerto con contenedores y grúas, representando comercio internacional",
-      "imageUrl": "https://images.unsplash.com/photo-1590497008432-598f04441de8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzaGlwcGluZyUyMHBvcnR8ZW58MHx8fHwxNzYxMTI0NzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558318830-853081b6bb6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2hpcHBpbmclMjBwb3J0fGVufDB8fHx8MTc2MTI1NDA0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "shipping port"
     },
     {
       "id": "hero-bg-3",
       "description": "Avión de carga despegando al atardecer",
-      "imageUrl": "https://images.unsplash.com/photo-1482351437900-d57cf1b9cd37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJnbyUyMHBsYW5lfGVufDB8fHx8MTc2MTE0ODgyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXJnbyUyMHBsYW5lfGVufDB8fHx8MTc2MTE0ODgyOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cargo plane"
     }
   ]

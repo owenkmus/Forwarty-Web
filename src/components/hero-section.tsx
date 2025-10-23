@@ -89,7 +89,7 @@ export function HeroSection() {
         <Carousel
           setApi={setApi}
           plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full -z-10"
           opts={{ loop: true }}
         >
           <CarouselContent>
