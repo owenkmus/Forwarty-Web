@@ -88,11 +88,11 @@ export function HeroSection() {
 
   return (
     <>
-      <section id="inicio" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      <section id="inicio" className="relative w-full h-screen min-h-[700px] overflow-hidden">
         <Carousel
           setApi={setApi}
           plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full -z-20"
+          className="absolute inset-0 w-full h-full -z-10"
           opts={{ loop: true }}
         >
           <CarouselContent>
@@ -114,45 +114,47 @@ export function HeroSection() {
           </CarouselContent>
         </Carousel>
         
-        <motion.div
-            className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={containerVariants}
-        >
-            <div className="h-24">
-              <AnimatePresence mode="wait">
-                <motion.h1
-                    key={currentSlide}
-                    variants={textItemVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
-                >
-                    {heroTexts[currentSlide]}
-                </motion.h1>
-              </AnimatePresence>
-            </div>
-            <motion.p
-                className="max-w-xl mx-auto text-lg text-white/80 mb-8"
-                variants={itemVariants}
-            >
-                Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.
-            </motion.p>
+        <div className="w-full h-full flex items-center justify-center">
             <motion.div
-                className="flex flex-col sm:flex-row justify-center gap-4"
-                variants={itemVariants}
+                className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={containerVariants}
             >
-                <Button asChild size="lg">
-                <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-                <Link href="#contacto" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
-                </Button>
+                <div className="h-24">
+                <AnimatePresence mode="wait">
+                    <motion.h1
+                        key={currentSlide}
+                        variants={textItemVariants}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
+                    >
+                        {heroTexts[currentSlide]}
+                    </motion.h1>
+                </AnimatePresence>
+                </div>
+                <motion.p
+                    className="max-w-xl mx-auto text-lg text-white/80 mb-8"
+                    variants={itemVariants}
+                >
+                    Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.
+                </motion.p>
+                <motion.div
+                    className="flex flex-col sm:flex-row justify-center gap-4 z-20"
+                    variants={itemVariants}
+                >
+                    <Button asChild size="lg">
+                    <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
+                    </Button>
+                    <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
+                    <Link href="#contacto" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
+                    </Button>
+                </motion.div>
             </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
