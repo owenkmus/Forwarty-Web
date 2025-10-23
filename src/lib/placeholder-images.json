@@ -3,19 +3,19 @@
     {
       "id": "hero-bg-1",
       "description": "Dashboard de ERP con gráficos y mapa de logística global",
-      "imageUrl": "/images/hero-1.jpg",
+      "imageUrl": "/images/carrusel1.jpg",
       "imageHint": "logistics dashboard"
     },
     {
       "id": "hero-bg-2",
       "description": "Puerto con contenedores y grúas, representando comercio internacional",
-      "imageUrl": "/images/hero-2.jpg",
+      "imageUrl": "/images/carrusel2.jpg",
       "imageHint": "shipping port"
     },
     {
       "id": "hero-bg-3",
       "description": "Avión de carga despegando al atardecer",
-      "imageUrl": "/images/hero-3.jpg",
+      "imageUrl": "/images/carrusel3.jpg",
       "imageHint": "cargo plane"
     },
     {
