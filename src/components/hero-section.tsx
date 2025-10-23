@@ -46,10 +46,6 @@ export function HeroSection() {
 
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contacto');
-    if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsVideoOpen(true);
   };
 
