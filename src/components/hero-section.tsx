@@ -29,16 +29,12 @@ export function HeroSection() {
   );
 
   useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
 
     const onSelect = (api: CarouselApi) => {
       setCurrentSlide(api.selectedScrollSnap());
     };
-
     api.on("select", onSelect);
-
     return () => {
       api.off("select", onSelect);
     };
@@ -51,24 +47,12 @@ export function HeroSection() {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   const textItemVariants = {
@@ -77,74 +61,75 @@ export function HeroSection() {
     exit: { y: -20, opacity: 0, transition: { duration: 0.5 } }
   };
 
-
   return (
     <>
       <section id="inicio" className="relative w-full h-screen min-h-[700px] overflow-hidden">
-        <Carousel
-          setApi={setApi}
-          plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full"
-          opts={{ loop: true }}
-        >
-          <CarouselContent>
-            {heroCarouselImages.map((image, index) => (
-              <CarouselItem key={image.id} className="relative w-full h-full">
-                <Image
-                  src={image.imageUrl}
-                  alt={image.description}
-                  fill
-                  priority={index === 0}
-                  className="object-cover"
-                  data-ai-hint={image.imageHint}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <div className="absolute inset-0 z-0">
+          <Carousel
+            setApi={setApi}
+            plugins={[autoplayPlugin.current]}
+            className="w-full h-full"
+            opts={{ loop: true }}
+          >
+            <CarouselContent className="w-full h-full">
+              {heroCarouselImages.map((image, index) => (
+                <CarouselItem key={image.id} className="w-full h-full">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    priority={index === 0}
+                    className="object-cover"
+                    data-ai-hint={image.imageHint}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
         
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-        <div className="relative z-10 h-full flex items-center justify-center">
-            <motion.div
-                className="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={containerVariants}
+        <div className="relative z-20 h-full flex items-center justify-center">
+          <motion.div
+            className="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={containerVariants}
+          >
+            <div className="h-24">
+              <AnimatePresence mode="wait">
+                <motion.h1
+                  key={currentSlide}
+                  variants={textItemVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
+                >
+                  {heroTexts[currentSlide]}
+                </motion.h1>
+              </AnimatePresence>
+            </div>
+            <motion.p
+              className="max-w-xl mx-auto text-lg text-white/80 mb-8"
+              variants={itemVariants}
             >
-                <div className="h-24">
-                  <AnimatePresence mode="wait">
-                      <motion.h1
-                          key={currentSlide}
-                          variants={textItemVariants}
-                          initial="initial"
-                          animate="animate"
-                          exit="exit"
-                          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
-                      >
-                          {heroTexts[currentSlide]}
-                      </motion.h1>
-                  </AnimatePresence>
-                </div>
-                <motion.p
-                    className="max-w-xl mx-auto text-lg text-white/80 mb-8"
-                    variants={itemVariants}
-                >
-                    Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.
-                </motion.p>
-                <motion.div
-                    className="flex flex-col sm:flex-row justify-center gap-4"
-                    variants={itemVariants}
-                >
-                    <Button asChild size="lg">
-                    <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
-                    </Button>
-                    <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-                    <Link href="#" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
-                    </Button>
-                </motion.div>
+              Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.
+            </motion.p>
+            <motion.div
+              className="flex flex-col sm:flex-row justify-center gap-4"
+              variants={itemVariants}
+            >
+              <Button asChild size="lg">
+                <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
+                <Link href="#" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
+              </Button>
             </motion.div>
+          </motion.div>
         </div>
       </section>
 
