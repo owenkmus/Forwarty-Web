@@ -2,26 +2,26 @@
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "An abstract 3D render of interconnected nodes and data streams, representing a complex logistics network.",
-      "imageUrl": "https://images.unsplash.com/photo-1684766462347-78b3bfc0995d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDB8fHx8MTc2MTE3MDgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract technology network"
+      "description": "Una persona en un escritorio con un PC desarrollando",
+      "imageUrl": "https://images.unsplash.com/photo-1637855191735-85baaccab810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZXZlbG9wZXIlMjBkZXNrfGVufDB8fHx8MTc2MTIyMDY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "developer desk"
     },
     {
       "id": "about-us-illustration",
-      "description": "A diverse group of engineers and professionals working on a futuristic interface with data visualizations and logistics elements.",
-      "imageUrl": "https://images.unsplash.com/photo-1561719998-e6763867e182?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmdXR1cmlzdGljJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYxMTcwODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Un equipo diverso de ingenieros y profesionales colaborando en una interfaz futurista con visualizaciones de datos y elementos logísticos.",
+      "imageUrl": "https://images.unsplash.com/photo-1603201667141-5a2d4c673378?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmdXR1cmlzdGljJTIwdGVhbSUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYxMTcwODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "futuristic team collaboration"
     },
     {
       "id": "blog-1",
       "description": "An organized and efficient logistics warehouse with automated robots.",
-      "imageUrl": "https://images.unsplash.com/photo-1504376830547-506dedfe1fe9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMDg4NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMjIzMTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logistics warehouse"
     },
     {
       "id": "blog-2",
       "description": "A large cargo ship on the ocean, representing global supply chains.",
-      "imageUrl": "https://images.unsplash.com/photo-1573014089159-8ee711dc5a8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FyZ28lMjBzaGlwfGVufDB8fHx8MTc2MTE0NzE0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHNoaXB8ZW58MHx8fHwxNzYxMTQ3MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cargo ship"
     },
     {
@@ -33,13 +33,13 @@
     {
       "id": "news-2",
       "description": "A digital map of the world with interconnected lines showing a global supply chain network.",
-      "imageUrl": "https://images.unsplash.com/photo-1759120828752-22c74f575dbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1759851335382-fb8ba2e17276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global supply chain"
     },
     {
       "id": "hero-background",
-      "description": "A stylized world map with glowing lines connecting major cities, representing global logistics routes.",
-      "imageUrl": "https://images.unsplash.com/photo-1735660244565-9574ca46c57d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnbG9iYWwlMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjExNzA4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Un mapa del mundo estilizado con líneas brillantes que conectan las principales ciudades, representando rutas logísticas globales.",
+      "imageUrl": "https://images.unsplash.com/photo-1684610529682-553625a1ffed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnbG9iYWwlMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NjExNzA4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global network background"
     }
   ]
