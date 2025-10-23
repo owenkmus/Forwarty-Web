@@ -2,43 +2,17 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PlayCircle } from 'lucide-react';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroCarouselImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-bg'));
-
-const heroTexts = [
-  "Control total de tu operación logística",
-  "Visibilidad global, decisiones inteligentes",
-  "ERP diseñado para agentes de carga"
-];
+const backgroundImage = PlaceHolderImages.find(p => p.id === 'hero-bg-1');
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [api, setApi] = useState<CarouselApi>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const autoplayPlugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })
-  );
-
-  useEffect(() => {
-    if (!api) return;
-
-    const onSelect = (api: CarouselApi) => {
-      setCurrentSlide(api.selectedScrollSnap());
-    };
-    api.on("select", onSelect);
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
 
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -55,38 +29,19 @@ export function HeroSection() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  const textItemVariants = {
-    initial: { y: 20, opacity: 0 },
-    animate: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-    exit: { y: -20, opacity: 0, transition: { duration: 0.5 } }
-  };
-
   return (
     <>
       <section id="inicio" className="relative w-full h-screen min-h-[700px] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Carousel
-            setApi={setApi}
-            plugins={[autoplayPlugin.current]}
-            className="w-full h-full"
-            opts={{ loop: true }}
-          >
-            <CarouselContent className="w-full h-full">
-              {heroCarouselImages.map((image, index) => (
-                <CarouselItem key={image.id} className="w-full h-full">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    fill
-                    priority={index === 0}
-                    className="object-cover"
-                    data-ai-hint={image.imageHint}
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
+        {backgroundImage && (
+          <Image
+            src={backgroundImage.imageUrl}
+            alt={backgroundImage.description}
+            fill
+            priority
+            className="object-cover"
+            data-ai-hint={backgroundImage.imageHint}
+          />
+        )}
         
         <div className="absolute inset-0 bg-black/40 z-10"></div>
 
@@ -98,20 +53,12 @@ export function HeroSection() {
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
           >
-            <div className="h-24">
-              <AnimatePresence mode="wait">
-                <motion.h1
-                  key={currentSlide}
-                  variants={textItemVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
-                >
-                  {heroTexts[currentSlide % heroTexts.length]}
-                </motion.h1>
-              </AnimatePresence>
-            </div>
+            <motion.h1
+                variants={itemVariants}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
+              >
+                Control total de tu operación logística
+              </motion.h1>
             <motion.p
               className="max-w-xl mx-auto text-lg text-white/80 mb-8"
               variants={itemVariants}
