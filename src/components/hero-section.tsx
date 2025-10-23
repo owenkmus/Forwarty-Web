@@ -8,6 +8,7 @@ import { useState, useRef } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const slides = [
   {
@@ -15,21 +16,18 @@ const slides = [
     title: 'Control total de tu operación logística',
     description:
       'Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.',
-    imageUrl: '/images/carrusel1.jpg',
   },
   {
     id: 'hero-bg-2',
     title: 'Visibilidad global, decisiones inteligentes',
     description:
       'Nuestra plataforma te ofrece una visión 360° de tus operaciones en tiempo real.',
-    imageUrl: '/images/carrusel2.jpg',
   },
   {
     id: 'hero-bg-3',
     title: 'ERP diseñado para agentes de carga',
     description:
       'Automatiza, centraliza y analiza cada aspecto de tu negocio de comercio internacional.',
-    imageUrl: '/images/carrusel3.png',
   },
 ];
 
@@ -53,39 +51,41 @@ export function HeroSection() {
           opts={{ loop: true }}
         >
           <CarouselContent className="m-0 h-full">
-            {slides.map((slide) => (
-              <CarouselItem key={slide.id} className="p-0 h-full relative">
-                {/* Background Image */}
-                <div className="absolute inset-0">
-                  <Image
-                    src={slide.imageUrl}
-                    alt={slide.title}
-                    fill
-                    className="object-cover"
-                    priority={slide.id === 'hero-bg-1'}
-                    sizes="100vw"
-                  />
-                  <div className="absolute inset-0 bg-black/50" />
-                </div>
+            {slides.map((slide) => {
+                const image = PlaceHolderImages.find(p => p.id === slide.id);
+                return (
+                    <CarouselItem key={slide.id} className="p-0 h-full relative">
+                        {image && (
+                            <Image
+                                src={image.imageUrl}
+                                alt={slide.title}
+                                fill
+                                className="object-cover"
+                                priority={slide.id === 'hero-bg-1'}
+                                sizes="100vw"
+                                data-ai-hint={image.imageHint}
+                            />
+                        )}
+                        <div className="absolute inset-0 bg-black/50" />
 
-                {/* Content */}
-                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center h-full">
-                  <div className="max-w-4xl">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline">
-                      {slide.title}
-                    </h1>
-                    <p className="max-w-xl mx-auto text-lg text-white/80 mb-8">
-                      {slide.description}
-                    </p>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
+                        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center h-full">
+                            <div className="max-w-4xl">
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline">
+                                {slide.title}
+                                </h1>
+                                <p className="max-w-xl mx-auto text-lg text-white/80 mb-8">
+                                {slide.description}
+                                </p>
+                            </div>
+                        </div>
+                  </CarouselItem>
+                )
+            })}
           </CarouselContent>
         </Carousel>
 
         {/* Buttons are outside the carousel to be static */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex flex-col sm:flex-row justify-center gap-4">
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex flex-col sm:flex-row justify-center gap-4 w-full px-4">
           <Button asChild size="lg">
             <Link href="#modulos">
               Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5" />
