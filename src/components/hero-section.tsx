@@ -5,17 +5,16 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PlayCircle } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useState, useRef, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay"
 
 const heroCarouselImages = [
-  PlaceHolderImages.find(p => p.id === 'hero-bg-1'),
-  PlaceHolderImages.find(p => p.id === 'hero-bg-2'),
-  PlaceHolderImages.find(p => p.id === 'hero-bg-3'),
-].filter(Boolean); // Filter out undefined values
+  { id: 'hero-bg-1', imageUrl: 'https://picsum.photos/seed/1/1920/1080', description: 'Dashboard de ERP con gráficos y mapa de logística global', imageHint: 'logistics dashboard' },
+  { id: 'hero-bg-2', imageUrl: 'https://picsum.photos/seed/2/1920/1080', description: 'Puerto con contenedores y grúas, representando comercio internacional', imageHint: 'shipping port' },
+  { id: 'hero-bg-3', imageUrl: 'https://picsum.photos/seed/3/1920/1080', description: 'Avión de carga despegando al atardecer', imageHint: 'cargo plane' },
+];
 
 const heroTexts = [
   "Control total de tu operación logística",
@@ -51,7 +50,6 @@ export function HeroSection() {
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setIsVideoOpen(true);
-    // The scroll to contact is removed to prioritize opening the video.
   };
 
   const containerVariants = {
@@ -89,11 +87,11 @@ export function HeroSection() {
         <Carousel
           setApi={setApi}
           plugins={[autoplayPlugin.current]}
-          className="absolute inset-0 w-full h-full -z-10"
+          className="absolute inset-0 w-full h-full"
           opts={{ loop: true }}
         >
           <CarouselContent>
-            {heroCarouselImages.map((image, index) => image && (
+            {heroCarouselImages.map((image, index) => (
               <CarouselItem key={index} className="relative w-full h-full">
                 <Image
                   src={image.imageUrl}
