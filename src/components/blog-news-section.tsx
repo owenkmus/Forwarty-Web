@@ -15,7 +15,7 @@ const blogPosts = [
     title: '5 Maneras de Reducir Costos en tu Almacén',
     summary: 'Descubre estrategias probadas para optimizar el espacio y los procesos en tu centro de distribución.',
     date: '15 de Julio, 2024',
-    image: PlaceHolderImages.find(p => p.id === 'blog-1'),
+    imageId: 'blog-1',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const blogPosts = [
     title: 'El Futuro es Ahora: IoT en la Logística',
     summary: 'Exploramos cómo el Internet de las Cosas está revolucionando la visibilidad de la cadena de suministro.',
     date: '02 de Julio, 2024',
-    image: PlaceHolderImages.find(p => p.id === 'blog-2'),
+    imageId: 'blog-2',
   },
 ];
 
@@ -34,7 +34,7 @@ const newsArticles = [
     title: 'Forwarty Lanza Nueva Herramienta de IA Predictiva',
     summary: 'Nuestra última innovación utiliza inteligencia artificial para predecir demandas y optimizar inventarios.',
     date: '20 de Julio, 2024',
-    image: PlaceHolderImages.find(p => p.id === 'news-1'),
+    imageId: 'news-1',
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const newsArticles = [
     title: 'Análisis: Nuevas Rutas Comerciales y su Impacto',
     summary: 'Un vistazo a cómo los cambios geopolíticos están afectando las cadenas de suministro globales y cómo adaptarse.',
     date: '18 de Julio, 2024',
-    image: PlaceHolderImages.find(p => p.id === 'news-2'),
+    imageId: 'news-2',
   },
 ];
 
@@ -64,36 +64,40 @@ const itemVariants = {
   },
 };
 
-const PostCard = ({ post }: { post: any }) => (
-  <motion.div variants={itemVariants}>
-    <Card className="overflow-hidden h-full flex flex-col group transition-all duration-300 hover:border-primary">
-      {post.image && (
-        <div className="relative w-full h-48">
-          <Image
-            src={post.image.imageUrl}
-            alt={post.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            data-ai-hint={post.image.imageHint}
-          />
-        </div>
-      )}
-      <CardHeader>
-        <Badge variant="secondary" className="mb-2 w-fit">{post.category}</Badge>
-        <CardTitle className="text-lg">
-          <Link href="#" className="hover:text-primary transition-colors">{post.title}</Link>
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <p className="text-sm text-muted-foreground">{post.summary}</p>
-      </CardContent>
-      <CardFooter>
-        <p className="text-xs text-muted-foreground">{post.date}</p>
-      </CardFooter>
-    </Card>
-  </motion.div>
-);
+const PostCard = ({ post }: { post: any }) => {
+  const image = PlaceHolderImages.find(p => p.id === post.imageId);
+  return (
+    <motion.div variants={itemVariants}>
+      <Card className="overflow-hidden h-full flex flex-col group transition-all duration-300 hover:border-primary">
+        {image && (
+          <div className="relative w-full h-48">
+            <Image
+              src={image.imageUrl}
+              alt={post.title}
+              width={600}
+              height={400}
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              data-ai-hint={image.imageHint}
+            />
+          </div>
+        )}
+        <CardHeader>
+          <Badge variant="secondary" className="mb-2 w-fit">{post.category}</Badge>
+          <CardTitle className="text-lg">
+            <Link href="#" className="hover:text-primary transition-colors">{post.title}</Link>
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow">
+          <p className="text-sm text-muted-foreground">{post.summary}</p>
+        </CardContent>
+        <CardFooter>
+          <p className="text-xs text-muted-foreground">{post.date}</p>
+        </CardFooter>
+      </Card>
+    </motion.div>
+  );
+};
 
 export function BlogNewsSection() {
   return (

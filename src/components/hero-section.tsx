@@ -8,13 +8,10 @@ import { ArrowRight, PlayCircle } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay"
+import Autoplay from "embla-carousel-autoplay";
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroCarouselImages = [
-  { id: 'hero-bg-1', imageUrl: 'https://picsum.photos/seed/1/1920/1080', description: 'Dashboard de ERP con gráficos y mapa de logística global', imageHint: 'logistics dashboard' },
-  { id: 'hero-bg-2', imageUrl: 'https://picsum.photos/seed/2/1920/1080', description: 'Puerto con contenedores y grúas, representando comercio internacional', imageHint: 'shipping port' },
-  { id: 'hero-bg-3', imageUrl: 'https://picsum.photos/seed/3/1920/1080', description: 'Avión de carga despegando al atardecer', imageHint: 'cargo plane' },
-];
+const heroCarouselImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-bg'));
 
 const heroTexts = [
   "Control total de tu operación logística",
@@ -49,6 +46,10 @@ export function HeroSection() {
 
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsVideoOpen(true);
   };
 
@@ -92,7 +93,7 @@ export function HeroSection() {
         >
           <CarouselContent>
             {heroCarouselImages.map((image, index) => (
-              <CarouselItem key={index} className="relative w-full h-full">
+              <CarouselItem key={image.id} className="relative w-full h-full">
                 <Image
                   src={image.imageUrl}
                   alt={image.description}
@@ -106,11 +107,9 @@ export function HeroSection() {
           </CarouselContent>
         </Carousel>
         
-        {/* Overlay for text contrast */}
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Content container */}
-        <div className="relative z-10 w-full h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex items-center justify-center">
             <motion.div
                 className="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
                 initial="hidden"
@@ -119,18 +118,18 @@ export function HeroSection() {
                 variants={containerVariants}
             >
                 <div className="h-24">
-                <AnimatePresence mode="wait">
-                    <motion.h1
-                        key={currentSlide}
-                        variants={textItemVariants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
-                    >
-                        {heroTexts[currentSlide]}
-                    </motion.h1>
-                </AnimatePresence>
+                  <AnimatePresence mode="wait">
+                      <motion.h1
+                          key={currentSlide}
+                          variants={textItemVariants}
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
+                      >
+                          {heroTexts[currentSlide]}
+                      </motion.h1>
+                  </AnimatePresence>
                 </div>
                 <motion.p
                     className="max-w-xl mx-auto text-lg text-white/80 mb-8"

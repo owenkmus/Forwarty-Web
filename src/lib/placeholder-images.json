@@ -1,27 +1,33 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-illustration",
-      "description": "Una persona en un escritorio con un PC desarrollando",
-      "imageUrl": "https://images.unsplash.com/photo-1623281185000-6940e5347d2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXIlMjBkZXNrfGVufDB8fHx8MTc2MTIyMDY4NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "developer desk"
+      "id": "hero-bg-1",
+      "description": "Dashboard de ERP con gráficos y mapa de logística global",
+      "imageUrl": "https://images.unsplash.com/photo-1638283736583-f116eacc4fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb2dpc3RpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMTQzOTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logistics dashboard"
     },
     {
-      "id": "about-us-illustration",
-      "description": "Un equipo diverso de ingenieros y profesionales colaborando en una interfaz futurista con visualizaciones de datos y elementos logísticos.",
-      "imageUrl": "https://images.unsplash.com/photo-1600446020369-d5a277906615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZnV0dXJpc3RpYyUyMHRlYW0lMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8MTc2MTE3MDgwNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "futuristic team collaboration"
+      "id": "hero-bg-2",
+      "description": "Puerto con contenedores y grúas, representando comercio internacional",
+      "imageUrl": "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzaGlwcGluZyUyMHBvcnR8ZW58MHx8fHwxNzYxMjU0MDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shipping port"
+    },
+    {
+      "id": "hero-bg-3",
+      "description": "Avión de carga despegando al atardecer",
+      "imageUrl": "https://images.unsplash.com/photo-1482351437900-d57cf1b9cd37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXJnbyUyMHBsYW5lfGVufDB8fHx8MTc2MTE0ODgyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cargo plane"
     },
     {
       "id": "blog-1",
       "description": "An organized and efficient logistics warehouse with automated robots.",
-      "imageUrl": "https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMjIzMTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1504376830547-506dedfe1fe9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dpc3RpY3MlMjB3YXJlaG91c2V8ZW58MHx8fHwxNzYxMjIzMTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "logistics warehouse"
     },
     {
       "id": "blog-2",
       "description": "A large cargo ship on the ocean, representing global supply chains.",
-      "imageUrl": "https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXJnbyUyMHNoaXB8ZW58MHx8fHwxNzYxMTQ3MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1575528941322-c74397246f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYXJnbyUyMHNoaXB8ZW58MHx8fHwxNzYxMTQ3MTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cargo ship"
     },
     {
@@ -33,26 +39,8 @@
     {
       "id": "news-2",
       "description": "A digital map of the world with interconnected lines showing a global supply chain network.",
-      "imageUrl": "https://images.unsplash.com/photo-1759851335382-fb8ba2e17276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758777625576-09fc43631902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnbG9iYWwlMjBzdXBwbHklMjBjaGFpbnxlbnwwfHx8fDE3NjExNjE1MDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "global supply chain"
-    },
-    {
-      "id": "hero-bg-1",
-      "description": "Dashboard de ERP con gráficos y mapa de logística global",
-      "imageUrl": "https://images.unsplash.com/photo-1587903318972-9ca74ba4579c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsb2dpc3RpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzYxMTQzOTE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logistics dashboard"
-    },
-    {
-      "id": "hero-bg-2",
-      "description": "Puerto con contenedores y grúas, representando comercio internacional",
-      "imageUrl": "https://images.unsplash.com/photo-1558318830-853081b6bb6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2hpcHBpbmclMjBwb3J0fGVufDB8fHx8MTc2MTI1NDA0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "shipping port"
-    },
-    {
-      "id": "hero-bg-3",
-      "description": "Avión de carga despegando al atardecer",
-      "imageUrl": "https://images.unsplash.com/photo-1606185540834-d6e7483ee1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjYXJnbyUyMHBsYW5lfGVufDB8fHx8MTc2MTE0ODgyOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cargo plane"
     }
   ]
 }
