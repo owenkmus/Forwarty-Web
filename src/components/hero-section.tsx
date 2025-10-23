@@ -53,6 +53,10 @@ export function HeroSection() {
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setIsVideoOpen(true);
+    const contactSection = document.getElementById('contacto');
+    if(contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const containerVariants = {
@@ -109,7 +113,7 @@ export function HeroSection() {
           </CarouselContent>
         </Carousel>
 
-        <div className="absolute inset-0 bg-black/50 -z-10"></div>
+        <div className="absolute inset-0 bg-black/40 -z-10"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.div
@@ -144,7 +148,7 @@ export function HeroSection() {
               <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-              <Link href="#" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
+              <Link href="#contacto" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
             </Button>
           </motion.div>
         </div>
