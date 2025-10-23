@@ -65,19 +65,16 @@ const itemVariants = {
 };
 
 const PostCard = ({ post }: { post: any }) => {
-  // NOTE: The blog images are still using external URLs. 
-  // You can change them to local paths in `src/lib/placeholder-images.json`
   const image = PlaceHolderImages.find(p => p.id === post.imageId);
   return (
     <motion.div variants={itemVariants}>
       <Card className="overflow-hidden h-full flex flex-col group transition-all duration-300 hover:border-primary">
         {image && (
-          <div className="relative w-full h-48">
+          <div className="relative w-full h-40">
             <Image
               src={image.imageUrl}
               alt={post.title}
-              width={600}
-              height={400}
+              fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               data-ai-hint={image.imageHint}
