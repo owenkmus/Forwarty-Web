@@ -51,10 +51,7 @@ export function HeroSection() {
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
     setIsVideoOpen(true);
-    const contactSection = document.getElementById('contacto');
-    if(contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    // The scroll to contact is removed to prioritize opening the video.
   };
 
   const containerVariants = {
@@ -97,23 +94,24 @@ export function HeroSection() {
         >
           <CarouselContent>
             {heroCarouselImages.map((image, index) => image && (
-              <CarouselItem key={index}>
-                 <div className="relative w-full h-full">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    fill
-                    priority={index === 0}
-                    className="object-cover"
-                    data-ai-hint={image.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-black/40"></div>
-                </div>
+              <CarouselItem key={index} className="relative w-full h-full">
+                <Image
+                  src={image.imageUrl}
+                  alt={image.description}
+                  fill
+                  priority={index === 0}
+                  className="object-cover"
+                  data-ai-hint={image.imageHint}
+                />
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
         
+        {/* Overlay for text contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content container */}
         <div className="relative z-10 w-full h-full flex items-center justify-center">
             <motion.div
                 className="container mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center"
@@ -150,7 +148,7 @@ export function HeroSection() {
                     <Link href="#modulos">Explora nuestras soluciones <ArrowRight className="ml-2 h-5 w-5"/></Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-                    <Link href="#contacto" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
+                    <Link href="#" onClick={handleDemoClick}>Ver demo <PlayCircle className="ml-2 h-5 w-5" /></Link>
                     </Button>
                 </motion.div>
             </motion.div>
