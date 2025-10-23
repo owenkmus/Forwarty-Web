@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useState, useRef, useEffect } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay"
 
 const heroCarouselImages = [
@@ -25,7 +25,7 @@ const heroTexts = [
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [api, setApi] = useState<any>(null);
+  const [api, setApi] = useState<CarouselApi>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const autoplayPlugin = useRef(
@@ -37,9 +37,7 @@ export function HeroSection() {
       return;
     }
 
-    setCurrentSlide(api.selectedScrollSnap());
-
-    const onSelect = () => {
+    const onSelect = (api: CarouselApi) => {
       setCurrentSlide(api.selectedScrollSnap());
     };
 
@@ -82,8 +80,8 @@ export function HeroSection() {
   };
 
   const textItemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1, transition: { duration: 0.5 } },
     exit: { y: -20, opacity: 0, transition: { duration: 0.5 } }
   };
 
@@ -122,20 +120,20 @@ export function HeroSection() {
             viewport={{ once: true, amount: 0.2 }}
             variants={containerVariants}
         >
-            <motion.div
-                className="flex flex-col items-center"
-                key={currentSlide}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={textItemVariants}
-            >
-                <h1
+            <div className="h-24">
+              <AnimatePresence mode="wait">
+                <motion.h1
+                    key={currentSlide}
+                    variants={textItemVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
                     className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6 font-headline max-w-4xl"
                 >
                     {heroTexts[currentSlide]}
-                </h1>
-            </motion.div>
+                </motion.h1>
+              </AnimatePresence>
+            </div>
             <motion.p
                 className="max-w-xl mx-auto text-lg text-white/80 mb-8"
                 variants={itemVariants}
