@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,8 +38,8 @@ export function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="#inicio" className="text-2xl font-bold text-white">
-            Forwarty<span className="text-primary">.</span>
+          <Link href="#inicio" className="flex items-center">
+            <Image src="/images/logo.png" alt="Forwarty Logo" width={140} height={40} priority />
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
@@ -67,8 +68,8 @@ export function Header() {
                 <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-card p-0">
                     <div className="p-6">
                         <div className="flex items-center justify-between mb-8">
-                            <Link href="#inicio" className="text-2xl font-bold text-foreground" onClick={() => setOpen(false)}>
-                                Forwarty<span className="text-primary">.</span>
+                            <Link href="#inicio" className="flex items-center" onClick={() => setOpen(false)}>
+                              <Image src="/images/logo.png" alt="Forwarty Logo" width={140} height={40} />
                             </Link>
                             <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
                                 <X className="h-6 w-6" />
