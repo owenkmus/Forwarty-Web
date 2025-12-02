@@ -35,11 +35,11 @@ export function Header() {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled ? 'bg-card/80 backdrop-blur-lg border-b border-border/20 shadow-lg' : 'bg-transparent'
       )}
-    >
+    > 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="#inicio" className="flex items-center">
-            <Image src="/images/logo.png" alt="Forwarty Logo" width={140} height={40} priority />
+            <Image src="/images/logoForwarty.svg" alt="Forwarty Logo" width={140} height={40} priority />
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">

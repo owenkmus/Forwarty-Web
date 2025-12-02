@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Linkedin, Twitter, Youtube } from "lucide-react";
 import { DynamicYear } from "./dynamic-year";
+import Image from 'next/image';
 
 const footerLinks = {
     'Empresa': [
@@ -27,9 +28,9 @@ export function Footer() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     <div className="lg:col-span-1">
-                        <Link href="#inicio" className="text-3xl font-bold text-foreground">
-                            Forwarty<span className="text-primary">.</span>
-                        </Link>
+                    <Link href="#inicio" className="flex items-center">
+                        <Image src="/images/logoForwarty.svg" alt="Forwarty Logo" width={140} height={40} priority />
+                    </Link>
                         <p className="mt-4 text-sm text-muted-foreground max-w-xs">
                             Impulsando la nueva era de la logística inteligente.
                         </p>
