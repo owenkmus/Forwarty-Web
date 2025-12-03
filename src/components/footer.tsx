@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Linkedin, Twitter, Youtube } from "lucide-react";
+import { Linkedin, Instagram, } from "lucide-react";
+import { TiktokIcon } from '@/components/icons/tiktok-icon';
 import { DynamicYear } from "./dynamic-year";
 import Image from 'next/image';
 
@@ -28,16 +29,16 @@ export function Footer() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                     <div className="lg:col-span-1">
-                    <Link href="#inicio" className="flex items-center">
-                        <Image src="/images/logoForwarty.svg" alt="Forwarty Logo" width={140} height={40} priority />
-                    </Link>
+                        <Link href="#inicio" className="flex items-center">
+                            <Image src="/images/logoForwarty.svg" alt="Forwarty Logo" width={140} height={40} priority />
+                        </Link>
                         <p className="mt-4 text-sm text-muted-foreground max-w-xs">
                             Impulsando la nueva era de la logística inteligente.
                         </p>
                         <div className="flex space-x-4 mt-6">
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin/></Link>
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter/></Link>
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Youtube/></Link>
+                            <Link href="https://www.linkedin.com/company/forwarty/" className="text-muted-foreground hover:text-primary"><Linkedin className="w-5 h-5" /></Link>
+                            <Link href="https://www.instagram.com/forwarty/" className="text-muted-foreground hover:text-primary"><Instagram className="w-5 h-5" /></Link>
+                            <Link href="https://www.tiktok.com/@forwartyerpcloud" className="text-muted-foreground hover:text-primary"><TiktokIcon className="w-5 h-5" /></Link>
                         </div>
                     </div>
                     <div className="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">

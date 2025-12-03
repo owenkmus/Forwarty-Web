@@ -12,28 +12,28 @@ import Autoplay from "embla-carousel-autoplay";
 const slides = [
   {
     id: 'hero-bg-1',
-    title: 'Control total de tu operación logística',
-    description: 'Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.',
-    imageUrl: '/images/carrusel1.jpg',
+    title: 'ERP diseñado para agentes de carga',
+    description: 'Automatiza, centraliza y analiza cada aspecto de tu negocio de comercio internacional.',
+    imageUrl: '/images/carrusel1.png',
   },
   {
     id: 'hero-bg-2',
     title: 'Visibilidad global, decisiones inteligentes',
     description: 'Nuestra plataforma te ofrece una visión 360° de tus operaciones en tiempo real.',
-    imageUrl: '/images/carrusel2.jpg',
+    imageUrl: '/images/carrusel2.png',
   },
   {
     id: 'hero-bg-3',
-    title: 'ERP diseñado para agentes de carga',
-    description: 'Automatiza, centraliza y analiza cada aspecto de tu negocio de comercio internacional.',
-    imageUrl: '/images/carrusel3.jpg',
+    title: 'Control total de tu operación logística',
+    description: 'Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.',
+    imageUrl: '/images/carrusel3.png',
   },
 ];
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   const handleDemoClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

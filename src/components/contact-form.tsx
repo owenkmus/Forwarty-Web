@@ -17,7 +17,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useToast } from "@/hooks/use-toast"
-import { submitContactForm } from "@/app/actions"
 import { contactFormSchema } from "@/lib/schemas"
 import { Loader2 } from "lucide-react";
 
@@ -35,18 +34,43 @@ export function ContactForm() {
   })
 
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    const result = await submitContactForm(values);
-    if (result.success) {
-      toast({
-        title: "Formulario Enviado",
-        description: result.message,
+    try {
+      // Send directly to Formspree from the client
+      const response = await fetch('https://formspree.io/f/mgvnggzr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          company: values.company || '',
+          message: values.message,
+        }),
       });
-      form.reset();
-    } else {
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Formulario Enviado",
+          description: "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+        });
+        form.reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: result.errors?.map((e: any) => e.message).join(', ') || "Hubo un error al enviar el formulario.",
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
       toast({
         variant: "destructive",
         title: "Error",
-        description: result.message,
+        description: "No se pudo conectar con el servidor. Verifica tu conexión.",
       });
     }
   }
