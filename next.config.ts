@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* 1. ESTO ES OBLIGATORIO: Genera archivos HTML estáticos para GoDaddy */
+  output: 'export',
+
   devIndicators: {
     buildActivity: false,
   },
@@ -12,6 +14,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
