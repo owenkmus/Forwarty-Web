@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 // 1. Aquí colocamos tu nueva Metadata (Título, descripción, robots, canonical)
 export const metadata: Metadata = {
-  title: "ERP para Agentes de Carga | Software Especializado en la Nube | Administración del DO",
+  title: "Forwarty ERP | Para Freight Forwarders | Software Especializado en la Nube | Administración del DO",
   description: "Optimiza tus operaciones logísticas con Forwarty ERP Cloud para agentes de carga. Automatiza procesos, reduce errores y mejora la rentabilidad. Lleva todo el ciclo operativo y contable para la administración del DO. Solicita una Demostración y has parte de la transformación tecnológica para tu organización.",
   robots: "index, follow",
   alternates: {

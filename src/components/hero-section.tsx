@@ -3,35 +3,37 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import { ArrowRight, PlayCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 const slides = [
   {
     id: 'hero-bg-1',
     title: 'ERP diseñado para agentes de carga',
     description: 'Automatiza, centraliza y analiza cada aspecto de tu negocio de comercio internacional.',
-    imageUrl: '/images/carrusel1.png',
+    imageUrl: '/images/slides/carrusel1.png',
   },
   {
     id: 'hero-bg-2',
     title: 'Visibilidad global, decisiones inteligentes',
     description: 'Nuestra plataforma te ofrece una visión 360° de tus operaciones en tiempo real.',
-    imageUrl: '/images/carrusel2.png',
+    imageUrl: '/images/slides/carrusel2.png',
   },
   {
     id: 'hero-bg-3',
     title: 'Control total de tu operación logística',
     description: 'Soluciones innovadoras que optimizan tu cadena de suministro, reducen costos y potencian el crecimiento de tu negocio.',
-    imageUrl: '/images/carrusel3.png',
+    imageUrl: '/images/slides/carrusel3.png',
   },
 ];
 
 export function HeroSection() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
@@ -48,6 +50,7 @@ export function HeroSection() {
           plugins={[plugin.current]}
           opts={{ loop: true }}
           className="absolute inset-0 w-full h-full"
+          setApi={setApi}
         >
           <CarouselContent className="m-0 h-full">
             {slides.map((slide) => (
@@ -97,6 +100,30 @@ export function HeroSection() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          
+          {/* Botones de navegación */}
+          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white">
+            <ChevronLeft className="h-6 w-6" />
+          </CarouselPrevious>
+          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20 h-12 w-12 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white">
+            <ChevronRight className="h-6 w-6" />
+          </CarouselNext>
+          
+          {/* Indicadores de puntos */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all ${
+                  api?.selectedScrollSnap() === index 
+                    ? 'w-8 bg-white' 
+                    : 'w-2 bg-white/50 hover:bg-white/75'
+                }`}
+                aria-label={`Ir al slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </Carousel>
 
         {/* Modal de video */}
@@ -108,7 +135,7 @@ export function HeroSection() {
             <div className="aspect-video">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="/images/demo.mp4"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

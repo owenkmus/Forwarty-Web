@@ -59,7 +59,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="mt-12 pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-                    <p>&copy; <DynamicYear /> Forwarty Digital. Todos los derechos reservados.</p>
+                    <p>&copy; <DynamicYear /> Forwarty ERP Cloud. Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

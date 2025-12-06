@@ -21,8 +21,10 @@ const modules = [
     title: 'Operaciones',
     features: [
         'Control de Operaciones',
-        'Trazabilidad y Estatus',
+        'Trazabilidad y Status',
         'Reportes de Rendimiento',
+        'Tiempos logísticos',
+        'Semáforo de indicadores',
     ],
   },
   {
@@ -30,9 +32,9 @@ const modules = [
     title: 'Contabilidad',
     features: [
       'Gestión de Conceptos',
-      'Facturación Electrónica',
-      'Recibos de Caja',
-      'Reportes Financieros',
+      'Documentos Electrónicos (próximamente)',
+      'Reportes tributrarios (próximamente)',
+      'Reportes Financieros  (próximamente)',
     ],
   },
   {
@@ -40,8 +42,8 @@ const modules = [
     title: 'Administrativo',
     features: [
         'Gestión de Aliados',
-        'Control Financiero',
         'Reporte de Vencimientos',
+        'Listas Circular 170',
     ],
   },
   {
@@ -79,8 +81,17 @@ const cardVariants = {
 
 export function ModulesSection() {
   return (
-    <section id="modulos" className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="modulos" className="relative py-20 lg:py-32 bg-background overflow-hidden">
+      {/* Imagen de fondo */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/images/fondo-modulos.png)' }}
+        />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground font-headline">El Corazón de su Operación</h2>
         </div>
